@@ -20,6 +20,7 @@
 
 // %hook RPMovieWriter
 
+// - (void)setUpAssetWriter {
 // - (void)setUpAssetWriterWithHandler:(id)handler {
 //     canAddInput = NO;
 //     %orig;
@@ -39,9 +40,32 @@
 
 // %end
 
+// iOS 13 (?) +
 %hook RPHardwareUtility
 
+// Cap: 1920x1920
 + (CGSize)limitRecordingWindowSizeFromSize:(CGSize)size {
+    return size;
+}
+
+%end
+
+// iOS 10 - 12?
+%hook RPRecordingSession
+
+// Cap (iOS 10 - 11?): 1600x1600
+// Cap (iOS 12): 1920x1920
+- (CGSize)_maximumSizeWithSize:(CGSize)size {
+    return size;
+}
+
+%end
+
+// iOS 9
+%hook RPRecordingManager
+
+// Cap: 1600x1600
+- (CGSize)maximumSizeWithSize:(CGSize)size {
     return size;
 }
 
