@@ -40,7 +40,7 @@
 
 // %end
 
-// iOS 13 (?) +
+// iOS 14+
 %hook RPHardwareUtility
 
 // Cap: 1920x1920
@@ -50,11 +50,11 @@
 
 %end
 
-// iOS 10 - 12?
+// iOS 10 - 13
 %hook RPRecordingSession
 
-// Cap (iOS 10 - 11?): 1600x1600
-// Cap (iOS 12): 1920x1920
+// Cap (iOS 10): 1600x1600
+// Cap (iOS 11 - 13): 1920x1920
 - (CGSize)_maximumSizeWithSize:(CGSize)size {
     return size;
 }
