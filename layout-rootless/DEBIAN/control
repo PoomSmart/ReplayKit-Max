@@ -1,5 +1,5 @@
 Package: com.ps.replaykitmax-rootless
-Name: ReplayKit Max
+Name: ReplayKit Max (Rootless)
 Version: 1.0.0
 Architecture: iphoneos-arm
 Description: Record screen without resolution cap.
