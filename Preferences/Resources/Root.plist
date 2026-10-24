@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Removes the resolution cap and records at the full screen size. Takes effect on the next recording.</string>
+			<key>id</key>
+			<string>enabledGroup</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.apple.replayd</string>
+			<key>key</key>
+			<string>RPEnabled</string>
+			<key>label</key>
+			<string>Enable ReplayKit Max</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Records at up to 120 frames per second. Playback still follows how often the screen updates.</string>
+			<key>id</key>
+			<string>highFPSGroup</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.apple.replayd</string>
+			<key>key</key>
+			<string>RPHighFPSCapture</string>
+			<key>id</key>
+			<string>highFPS</string>
+			<key>label</key>
+			<string>120 FPS</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Saves the recording as HEVC instead of H.264, which keeps the file smaller.</string>
+			<key>id</key>
+			<string>hevcGroup</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.apple.replayd</string>
+			<key>key</key>
+			<string>RPHEVCCapture</string>
+			<key>id</key>
+			<string>hevc</string>
+			<key>label</key>
+			<string>HEVC</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Records in HDR10. The picture may look too bright.</string>
+			<key>id</key>
+			<string>hdrGroup</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.apple.replayd</string>
+			<key>key</key>
+			<string>RPHDR10Capture</string>
+			<key>id</key>
+			<string>hdr</string>
+			<key>label</key>
+			<string>HDR10 (Experimental)</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,11 +1,11 @@
 Package: com.ps.replaykitmax
 Name: ReplayKit Max
-Version: 1.0.0
+Version: 2.0.0
 Architecture: iphoneos-arm
-Description: Record screen without resolution cap.
+Description: Records screen without resolution cap.
 Maintainer: PoomSmart
 Author: PoomSmart
 Section: Tweaks
-Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 9.0)
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 9.0), preferenceloader
 Depiction: https://poomsmart.github.io/repo/depictions/replaykitmax.html
 SileoDepiction: https://poomsmart.github.io/repo/sileodepictions/replaykitmax.json
