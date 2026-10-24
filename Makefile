@@ -11,9 +11,9 @@ include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = ReplayKitMax
 
-$(TWEAK_NAME)_FILES = Tweak.x ReplayKitMax.m
+$(TWEAK_NAME)_FILES = Tweak.x
 $(TWEAK_NAME)_CFLAGS = -fobjc-arc
-$(TWEAK_NAME)_FRAMEWORKS = UIKit AVFoundation QuartzCore CoreMedia VideoToolbox
+$(TWEAK_NAME)_FRAMEWORKS = AVFoundation CoreMedia VideoToolbox
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 

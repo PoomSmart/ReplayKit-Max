@@ -2,7 +2,6 @@
 // RPEnabled defaults to on when the key is absent.
 // RPHighFPSCapture, RPHEVCCapture, and RPHDR10Capture default to off.
 
-#import "ReplayKitMax.h"
 #import <AVFoundation/AVFoundation.h>
 #import <CoreMedia/CoreMedia.h>
 #import <Foundation/Foundation.h>
@@ -29,9 +28,9 @@ static void RKReloadPrefs(void) {
     CFPreferencesAppSynchronize(kRKPrefsDomain);
     rkTweakEnabled = RKPrefBool(CFSTR("RPEnabled"), YES);
     BOOL enabled = rkTweakEnabled;
-    rkHighFPS = enabled && RKDisplaySupports120FPS() && RKPrefBool(CFSTR("RPHighFPSCapture"), NO);
-    rkHEVC = enabled && RKDeviceSupportsHEVC() && RKPrefBool(CFSTR("RPHEVCCapture"), NO);
-    rkHDR10 = enabled && RKDisplaySupportsHDR10() && RKPrefBool(CFSTR("RPHDR10Capture"), NO);
+    rkHighFPS = enabled && RKPrefBool(CFSTR("RPHighFPSCapture"), NO);
+    rkHEVC = enabled && RKPrefBool(CFSTR("RPHEVCCapture"), NO);
+    rkHDR10 = enabled && RKPrefBool(CFSTR("RPHDR10Capture"), NO);
 }
 
 static void RKPrefsChanged(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {
